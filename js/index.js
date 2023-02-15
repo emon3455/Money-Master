@@ -44,4 +44,17 @@ document.getElementById("calculate-btn").addEventListener("click" , function(){
 
 
 
+document.getElementById("save-button").addEventListener("click" , function(){
+
+    const savepersentage = getInputValueByID("save-input-field");
+    const saveAmount = income * (savepersentage/100);
+
+    setElementValueByID("saved-amount" , saveAmount);
+
+    const finalRemainingBalance = remainingBalance - saveAmount;
+    setElementValueByID("final-remaining-amount" , finalRemainingBalance);
+
+});
+
+
 
