@@ -31,6 +31,12 @@ document.getElementById("calculate-btn").addEventListener("click" , function(){
 
     const clothCost = getInputValueByID("cloth-cost");
 
+    if(isNaN(income) || isNaN(foodCost)  || isNaN(rentCost) || isNaN(clothCost)
+    || income<0 || foodCost<0 ||  rentCost<0 || clothCost<0){
+        alert("please enter a number(positive)");
+        return;
+    }
+
     totalExpenses = foodCost + rentCost + clothCost;
     
     setElementValueByID("total-expenses" , totalExpenses);
@@ -47,6 +53,13 @@ document.getElementById("calculate-btn").addEventListener("click" , function(){
 document.getElementById("save-button").addEventListener("click" , function(){
 
     const savepersentage = getInputValueByID("save-input-field");
+
+    if(isNaN(savepersentage) || savepersentage<0){
+        alert("please enter number(positive)");
+        return;
+    }
+
+
     const saveAmount = income * (savepersentage/100);
 
     setElementValueByID("saved-amount" , saveAmount);
