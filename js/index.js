@@ -2,8 +2,6 @@ function getInputValueByID(id){
     let inputField = document.getElementById(id);
     let inputValue = parseFloat(inputField.value);
 
-    inputField.value="";
-
     return inputValue;
 }
 
@@ -38,6 +36,11 @@ document.getElementById("calculate-btn").addEventListener("click" , function(){
     }
 
     totalExpenses = foodCost + rentCost + clothCost;
+
+    if(totalExpenses > income){
+        alert("you cannot spent more money than your income");
+        return;
+    }
     
     setElementValueByID("total-expenses" , totalExpenses);
 
@@ -59,8 +62,18 @@ document.getElementById("save-button").addEventListener("click" , function(){
         return;
     }
 
+    if(savepersentage>100){
+        alert("you cannot save more than 100%");
+        return;
+    }
+
 
     const saveAmount = income * (savepersentage/100);
+
+    if(saveAmount > remainingBalance){
+        alert("you cannot save more money then your remaining cost after expensions");
+        return;
+    }
 
     setElementValueByID("saved-amount" , saveAmount);
 
