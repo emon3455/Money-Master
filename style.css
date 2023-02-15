@@ -18,6 +18,8 @@ p{
 
 .images{
     width: 100%;
+    height: 100%;
+    background-size: contain;
 }
 
 .field{
@@ -64,6 +66,8 @@ input{
 .home-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
     gap: 4rem;
     padding: 1rem;
     font-size: 1.5rem;
@@ -85,7 +89,6 @@ input{
     align-items: center;
     gap: 0.5rem;
     margin: 1rem 0;
-
 }
 
 
