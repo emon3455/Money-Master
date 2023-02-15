@@ -1,10 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* common style start */
 *{
     margin:  0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+p{
+    font-weight: bold;
+}
+.container{
+    max-width: 1240px;
+    margin: 3rem auto;
+}
+
+.images{
+    width: 100%;
+}
+
+.field{
+    display: flex;
+    margin: 1rem 0;
+    gap: 1rem;
+    justify-content: center;
+}
+
+input{
+    width: 60%;
+}
+.input-info{
+    width: 40%;
+    font-weight: 500;
+}
+
+.btn{
+    background-color: #59A5FF;
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* common style end */
+
 
 
 /* header section start */
@@ -19,19 +60,70 @@
 
 
 
+/* main section start */
+.home-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.income,.expenses,.save-container ,.costing{
+    padding: 0.5rem;
+}
+
+
+.home-details{
+    background-color:  #F8F8F8;
+    text-align: center;
+    padding: 2rem;
+}
+
+.save-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+
+}
+
+
+
+
 
 /* responsive design start here */
 
-/* for tab */
+/* for laptop */
 @media screen  and (max-width: 992px){
     .header-title{
         font-size: 2rem;
     }
 }
 
+/* for tab */
+@media screen  and (max-width: 772px){
+
+    .btn{
+        font-size: 1.2rem;
+        padding: 0.2rem 0.7rem;
+    }
+
+    .home-container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0rem;
+        font-size: 1rem;
+    }
+   
+    
+}
+
+
 
 /* for mobile */
 @media screen and (max-width: 512px) {
+
     .header-title{
         font-size: 1.75rem;
     }
